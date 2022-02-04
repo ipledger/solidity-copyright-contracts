@@ -4,14 +4,18 @@ pragma solidity ^0.8.11;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "./NFTNonExclusiveLicenseCopyrightAgreement.sol";
 
-contract NFT is ERC721, Ownable {
+contract NFT is ERC721, Ownable, NFTNonExclusiveLicenseCopyrightAgreement {
     using Counters for Counters.Counter;
     using Strings for uint256;
     Counters.Counter private _tokenIds;
     mapping(uint256 => string) private _tokenURIs;
 
-    constructor() ERC721("NFT", "NFT") {}
+    constructor()
+        ERC721("NFT", "NFT")
+        NFTNonExclusiveLicenseCopyrightAgreement("ipfs://{cid}")
+    {}
 
     function _setTokenURI(uint256 tokenId, string memory _tokenURI)
         internal
