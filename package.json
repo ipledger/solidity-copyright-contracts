@@ -1,0 +1,19 @@
+{
+  "name": "solidity-copyright-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipledger/solidity-copyright-contracts.git"
+  },
+  "author": "IP Ledger Developers",
+  "bugs": {
+    "url": "https://github.com/ipledger/solidity-copyright-contracts/issues"
+  },
+  "homepage": "https://github.com/ipledger/solidity-copyright-contracts#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "hardhat": "^2.8.3"
+  }
+}
